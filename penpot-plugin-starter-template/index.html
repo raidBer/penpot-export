@@ -1,24 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penpot plugin to test code</title>
+    <title>Export WordPress</title>
   </head>
   <body>
-    <p>Penpot plugin to test code</p>
+    <div class="container">
+      <h1>Export WordPress</h1>
+      <p class="instructions">
+        Sélectionnez des éléments dans Penpot, puis cliquez sur Exporter HTML
+      </p>
 
-    <button type="button" data-appearance="primary" data-handler="blue-stripe">
-      blue stripe
-    </button>
+      <button
+        type="button"
+        data-appearance="primary"
+        data-handler="export-html"
+      >
+        Exporter HTML
+      </button>
 
-    <button type="button" data-appearance="primary" data-handler="restore-version">
-      restore version
-    </button>
+      <div id="error-message" class="message error" style="display: none"></div>
+      <div
+        id="success-message"
+        class="message success"
+        style="display: none"
+      ></div>
 
-    <button type="button" data-appearance="primary" data-handler="print-versions">
-      print versions
-    </button>
+      <div class="output-section">
+        <label for="html-output">HTML généré :</label>
+        <textarea
+          id="html-output"
+          rows="15"
+          readonly
+          placeholder="Le HTML apparaîtra ici..."
+        ></textarea>
+
+        <button
+          type="button"
+          data-appearance="secondary"
+          data-handler="copy-html"
+          id="copy-button"
+          disabled
+        >
+          Copier HTML
+        </button>
+      </div>
+
+      <div class="info">
+        <p>
+          <strong>Éléments supportés :</strong> Board, Frame, Groupe, Rectangle,
+          Cercle, Texte
+        </p>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

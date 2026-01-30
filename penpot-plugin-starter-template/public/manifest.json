@@ -1,6 +1,6 @@
 {
-  "name": "Penpot starter plugin",
+  "name": "Export WordPress",
   "code": "plugin.js",
-  "description": "This is a starter plugin for Penpot",
+  "description": "Exporte les éléments Penpot en HTML compatible WordPress",
   "permissions": ["content:read", "content:write"]
 }
